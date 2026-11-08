@@ -18,7 +18,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
-df = pd.read_csv("/home/claude/sales-demand-forecasting/data/sales_data.csv", parse_dates=["date"])
+df = pd.read_csv(ROOT / "data" / "sales_data.csv", parse_dates=["date"])
 
 # --- Feature engineering ---
 df["week_of_year"] = df["date"].dt.isocalendar().week.astype(int)
