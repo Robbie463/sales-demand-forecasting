@@ -57,7 +57,7 @@ plt.figure(figsize=(7, 5))
 importances.plot(kind="barh", color="#2a7")
 plt.title("Feature Importance — What Drives Predicted Sales")
 plt.tight_layout()
-plt.savefig("/home/claude/sales-demand-forecasting/images/feature_importance.png", dpi=120)
+plt.savefig(ROOT / "images" / "feature_importance.png", dpi=120)
 plt.close()
 
 # --- Actual vs predicted plot ---
@@ -70,11 +70,11 @@ plt.xlabel("Date")
 plt.ylabel("Units Sold")
 plt.legend()
 plt.tight_layout()
-plt.savefig("/home/claude/sales-demand-forecasting/images/actual_vs_predicted.png", dpi=120)
+plt.savefig(ROOT / "images" / "actual_vs_predicted.png", dpi=120)
 plt.close()
 
 print("\nSaved images/feature_importance.png and images/actual_vs_predicted.png")
 
 # Save metrics for README
-with open("/home/claude/sales-demand-forecasting/images/metrics.txt", "w") as f:
+with open(ROOT / "images" / "metrics.txt", "w") as f:
     f.write(f"MAE: {mae:.1f}\nRMSE: {rmse:.1f}\nR2: {r2:.3f}\n")
