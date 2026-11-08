@@ -5,6 +5,8 @@ Saves plots to ../images/ for use in the README and write-up.
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
 
 df = pd.read_csv("/home/claude/sales-demand-forecasting/data/sales_data.csv", parse_dates=["date"])
 
