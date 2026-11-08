@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
-df = pd.read_csv("/home/claude/sales-demand-forecasting/data/sales_data.csv", parse_dates=["date"])
+df = pd.read_csv(ROOT / "data" / "sales_data.csv, parse_dates=["date"])
 
 # 1. Sales trend over time by store
 plt.figure(figsize=(10, 5))
@@ -19,7 +19,7 @@ plt.xlabel("Date")
 plt.ylabel("Units Sold")
 plt.legend()
 plt.tight_layout()
-plt.savefig("/home/claude/sales-demand-forecasting/images/sales_trend.png", dpi=120)
+plt.savefig(ROOT / "images" / "sales_trend.png", dpi=120)
 plt.close()
 
 # 2. Promotion effect
@@ -30,7 +30,7 @@ plt.xticks([0, 1], ["No Promotion", "Promotion"], rotation=0)
 plt.title("Average Weekly Units Sold: Promotion vs. No Promotion")
 plt.ylabel("Avg Units Sold")
 plt.tight_layout()
-plt.savefig("/home/claude/sales-demand-forecasting/images/promotion_effect.png", dpi=120)
+plt.savefig(ROOT / "images" / "promotion_effect.png", dpi=120)
 plt.close()
 
 # 3. Holiday effect
