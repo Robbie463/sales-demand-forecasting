@@ -14,6 +14,8 @@ the pipeline (eda.py, model.py) works unchanged.
 
 import numpy as np
 import pandas as pd
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
 
 np.random.seed(42)
 
