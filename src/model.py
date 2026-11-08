@@ -15,6 +15,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
 
 df = pd.read_csv("/home/claude/sales-demand-forecasting/data/sales_data.csv", parse_dates=["date"])
 
