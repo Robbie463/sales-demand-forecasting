@@ -62,6 +62,6 @@ for store in stores:
     rows.append(df)
 
 full_df = pd.concat(rows, ignore_index=True).sort_values(["date", "store"])
-full_df.to_csv("/home/claude/sales-demand-forecasting/data/sales_data.csv", index=False)
+full_df.to_csv(ROOT / "data" / "sales_data.csv", index=False)
 print(f"Generated {len(full_df)} rows across {len(stores)} stores.")
 print(full_df.head())
