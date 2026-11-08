@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
-df = pd.read_csv(ROOT / "data" / "sales_data.csv, parse_dates=["date"])
+df = pd.read_csv(ROOT / "data" / "sales_data.csv", parse_dates=["date"])
 
 # 1. Sales trend over time by store
 plt.figure(figsize=(10, 5))
